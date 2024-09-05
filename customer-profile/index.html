@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Profile</title>
+    <link rel="icon" type="image/x-icon" href="/project/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="profile-container">
+        <header>
+            <div class="logo-container">
+                <img src="/project/customer-profile//logob.png" alt="Blaze Logo" class="logo">
+            </div>
+            <div class="header-title">Welcome<span id="username"></span></div>
+            <button class="logout-btn">Logout</button>
+        </header>
+
+        <section class="profile-section">
+            <div class="profile-card">
+                <div class="profile-picture">
+                    <img src="default-avatar.png" alt="Profile Picture" id="profile-img">
+                    <label for="upload-img" class="upload-icon">📷</label>
+                    <input type="file" id="upload-img" style="display: none;">
+                </div>
+                <div class="profile-info">
+                    <h2 id="username-display"></h2>
+                    <p id="email-display"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="orders-section">
+            <h3>Your Recent Orders</h3>
+            <div class="orders-container" id="orders-container">
+                <!-- Order cards will be injected here by JS -->
+            </div>
+            <button class="view-more">View More</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
