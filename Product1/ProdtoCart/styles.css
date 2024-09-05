@@ -1,0 +1,435 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#cart-items {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+    width: 100px;
+}
+
+.cart-item h2 {
+    margin: 0;
+}
+
+.cart-controls {
+    display: flex;
+    align-items: center;
+}
+
+.cart-controls button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-controls button:hover {
+    background-color: #ddd;
+}
+
+.hidden {
+    display: none;
+}
+
+#buy-now-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#buy-now-button:hover {
+    background-color: #45a049;
+}
+
+#cart-empty-message {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.2em;
+}
+
+
+
+
+
+h1 {
+    font-size: 3em; /* Increase font size */
+    margin-top: 120px; /* Move it down from the header */
+    text-align: center;
+    color: #000; /* Ensure the text color is clear */
+}
+.tagline {
+    font-size: 1.5em; /* Increase font size */
+    margin-top: 20px; /* Add some spacing below the H1 */
+    text-align: center;
+    color: #555;
+}
+
+header {
+    text-align: center;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin: 0px;
+}
+header .logo {
+    position: relative;
+    max-width: 200px;
+    height: 40px;
+    width: 100px;
+    margin-left: 20px;
+  }
+  
+  header ul {
+    display: flex;
+  }
+  
+  header ul li {
+    list-style: none;
+  }
+  
+  header ul li a {
+    position: relative;
+    color: #060606;
+    font-weight: 500;
+    margin-left: 0px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: color 0.4s ease, transform 0.4s ease;
+    font-size: 16px;
+
+  }
+  
+  
+  header ul li:not(.login):not(.cart) a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    transition: width 0.4s ease;
+    text-decoration: none;
+  }
+  
+  /* Apply hover effect to other links only */
+  header ul li:not(.login):not(.cart) a:hover::after {
+    width: 100%;
+    text-decoration: none;
+  }
+  
+  header ul li img{
+    width: 25px;
+    height: 25px;
+    margin-top: 12px;
+  }
+  
+  header ul li a:hover {
+    color: #ffffff; /* Example hover color */
+    transform: translateY(-5px); /* Lift effect on hover */
+  }
+  
+  header ul li a:hover::after {
+    width: 100%;
+    text-decoration: none;
+  }
+  
+  header ul li a.active {
+    color: #ff7f50; /* Active page link color */
+    text-decoration: none;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 50px;
+    padding: 4px;
+    padding-top: 0px;
+    padding: hidden;
+    width: 50px;
+    transition: width 0.5s ease;
+    overflow: hidden;
+    height: 50px;
+    margin-right: 15px;
+  }
+  
+  .search-container:hover {
+    width: 250px;
+    margin-right: 5px;
+   
+  }
+  
+  .search-icon {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+   
+   
+    
+    
+  }
+  
+  .search-input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 50px;
+    width: 0;
+    font-size: 14px;
+    transition: width 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+  }
+  
+  .search-container:hover .search-input {
+    width: 200px;
+    opacity: 1;
+  }
+
+
+header h1 {
+    font-size: 2.5em;
+    color: #000000;
+    animation: fadeInDown 1s ease-out;
+}
+
+.tagline {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 10px;
+}
+
+
+
+footer{
+    width: 100%;
+    position:relative;
+    bottom: 0;
+    background: linear-gradient(to bottom,#595959,#151515);
+    color:#ffffff;
+    padding: 10px 10px 10px;
+    font-size: 13px;
+    line-height: 20px;
+}
+.row{
+    width: 85%;
+    margin:20px;
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col{
+    flex-basis: 25%;
+    margin: 0%;
+    padding: 10px;
+    margin-left: 30px;
+}
+
+.col:nth-child(2), .col:nth-child(3){
+    flex-basis:15% ;
+}
+.logo{
+    width: 120px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+.col h5{
+    width: fit-content;
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 19px;
+    margin-top: 0px;
+
+}
+.col1  {
+    margin-left: 20px;
+    width: 200px;
+}
+.col2{
+    margin-left: 20px;
+}
+.col2 p{
+    margin-top: 0px;
+}
+
+
+.col3{
+    margin-left: 40px;
+}
+.col4{
+    margin-left: -80px;
+}
+.email{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+
+}
+.col ul{
+    padding-left: 0px;
+}
+.col p{
+    margin-bottom: 0;
+}
+ul li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+ul{
+    padding-left: 5px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+
+}
+form .fa-solid{
+    font-size: 38px;
+    margin-right: 10px;
+}
+form input{
+    width: 100%;
+    background: transparent;
+    color: white;
+    border: 0;
+    outline: none; 
+    
+}
+form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+form button .fa-solid{
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+
+
+}
+.social-icons .fa-brands {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #0e0d0d;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.copyright{
+    text-align: center;
+}
+hr{
+    width: 90%;
+    border:0;
+    border-bottom: 1px solid #ccc;
+    margin: 15px auto;
+}
+.underline{
+    width: 100%;
+    height: 2px;
+    background:#767676 ;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left:0;
+    overflow: hidden;
+    margin-top: 1px;
+}
+
+.underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position:absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+@keyframes moving {
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }   
+}
+
+@media(max-width:700px){
+    footer{
+        bottom:unset;
+
+    }
+    .col{
+        flex-basis: 100%;
+
+    }
+    .col:nth-child(2),.col:nth-child(3){
+        flex-basis: 100%;
+    }
+}
+
+
+.notification-content button {
+    background-color: #e67e22;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.notification-content button:hover {
+    background-color: #d35400;
+}
