@@ -1,0 +1,481 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+    display:flexbox;
+    flex-direction: column;
+    align-items:flex-end;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3em; /* Increase font size */
+    margin-top: 120px; /* Move it down from the header */
+    text-align: center;
+    color: #000; /* Ensure the text color is clear */
+}
+
+.tagline {
+    font-size: 1.5em; /* Increase font size */
+    margin-top: 20px; /* Add some spacing below the H1 */
+    text-align: center;
+    color: #555;
+}
+
+
+
+header {
+    text-align: center;
+    /* margin: 20px 0; */
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+header .logo {
+    position: relative;
+    max-width: 200px;
+    height: 40px;
+    width: 100px;
+    margin-left: 20px;
+  }
+  
+  header ul {
+    display: flex;
+  }
+  
+  header ul li {
+    list-style: none;
+  }
+  
+  header ul li a {
+    position: relative;
+    color: #060606;
+    font-weight: 500;
+    margin-left: 0px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: color 0.4s ease, transform 0.4s ease;
+    font-size: 16px;
+
+  }
+  
+  
+  header ul li:not(.login):not(.cart) a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    transition: width 0.4s ease;
+    text-decoration: none;
+  }
+  
+  /* Apply hover effect to other links only */
+  header ul li:not(.login):not(.cart) a:hover::after {
+    width: 100%;
+    text-decoration: none;
+  }
+  
+  header ul li img{
+    width: 25px;
+    height: 25px;
+    margin-top: 12px;
+  }
+  
+  header ul li a:hover {
+    color: #ffffff; /* Example hover color */
+    transform: translateY(-5px); /* Lift effect on hover */
+  }
+  
+  header ul li a:hover::after {
+    width: 100%;
+    text-decoration: none;
+  }
+  
+  header ul li a.active {
+    color: #ff7f50; /* Active page link color */
+    text-decoration: none;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 50px;
+    padding: 4px;
+    padding: hidden;
+    width: 50px;
+    transition: width 0.5s ease;
+    overflow: hidden;
+    height: 50px;
+    margin-right: 15px;
+  }
+  
+  .search-container:hover {
+    width: 250px;
+    margin-right: 5px;
+   
+  }
+  
+  .search-icon {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+   
+   
+    
+    
+  }
+  
+  .search-input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 50px;
+    width: 0;
+    font-size: 14px;
+    transition: width 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+  }
+  
+  .search-container:hover .search-input {
+    width: 200px;
+    opacity: 1;
+  }
+
+
+header h1 {
+    font-size: 2.5em;
+    color: #000000;
+    animation: fadeInDown 1s ease-out;
+}
+
+.tagline {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 10px;
+}
+
+#products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the entire section */
+}
+
+.product-row {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center;     /* Center items vertically */
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 270px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+}
+
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+    animation: floatImage 3s ease-in-out infinite;
+}
+
+.product-image:hover{
+    cursor: pointer;
+   
+
+}
+
+.buy-button, .cart-button {
+    background-color: #0f0f0f;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    margin-top: 0px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.buy-button a{
+    color: white;
+    text-decoration: none;
+}
+
+.cart-button {
+    background-color: #000000;
+    margin-top: 0px;
+    padding: 2px 20px 10px 20px;
+    
+}
+.cart-button img{
+    width: 20px;
+    height: 20px;
+    padding-top: 5px;
+    margin-bottom: -5px;
+   
+}
+
+
+.buy-button:hover {
+    background-color: #706f6f;
+    transform: translateY(-3px);
+}
+
+.cart-button:hover {
+    background-color: #706f6f;
+    transform: translateY(-3px);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatImage {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+footer{
+    width: 100%;
+    position:relative;
+    bottom: 0;
+    background: linear-gradient(to bottom,#595959,#151515);
+    color:#ffffff;
+    padding: 20px 20px 10px;
+    font-size: 13px;
+    line-height: 20px;
+
+
+}
+.row{
+    width: 85%;
+    margin:20px;
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col{
+    flex-basis: 25%;
+    margin: 0%;
+    padding: 10px;
+    margin-left: 30px;
+}
+
+.col:nth-child(2), .col:nth-child(3){
+    flex-basis:15% ;
+}
+.logo{
+    width: 120px;
+    height: 50px;
+    margin-bottom: 0px;
+}
+.col h5{
+    width: fit-content;
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 19px;
+    margin-top: 0px;
+
+}
+.col1  {
+    margin-left: 20px;
+    width: 200px;
+}
+.col2{
+    margin-left: 10px;
+}
+
+.col2 p{
+    margin-top: 0px;
+}
+.col3{
+    margin-left: 10px;
+}
+.col4{
+    margin-left: -80px;
+}
+.email{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+
+}
+.col ul{
+    padding-left: 0px;
+}
+.col p{
+    margin-bottom: 0;
+}
+ul li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+ul{
+    padding-left: 5px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+
+}
+form .fa-solid{
+    font-size: 38px;
+    margin-right: 10px;
+}
+form input{
+    width: 100%;
+    background: transparent;
+    color: white;
+    border: 0;
+    outline: none; 
+    
+}
+form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+form button .fa-solid{
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+
+
+}
+.social-icons .fa-brands {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #0e0d0d;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.copyright{
+    text-align: center;
+}
+hr{
+    width: 85%;
+    border:0;
+    border-bottom: 1px solid #ccc;
+    margin: 15px auto;
+}
+.underline{
+    width: 100%;
+    height: 2px;
+    background:#767676 ;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left:0;
+    overflow: hidden;
+    margin-top: 1px;
+}
+
+.underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position:absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+@keyframes moving {
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }   
+}
+
+@media(max-width:700px){
+    footer{
+        bottom:unset;
+
+    }
+    .col{
+        flex-basis: 100%;
+
+    }
+    .col:nth-child(2),.col:nth-child(3){
+        flex-basis: 100%;
+    }
+}
+
+
+.notification-content button {
+    background-color: #e67e22;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.notification-content button:hover {
+    background-color: #d35400;
+}
+

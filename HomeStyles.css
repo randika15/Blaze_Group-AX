@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* General Section Styling */
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: #000000; */
+  background: radial-gradient(circle at center, #ffffff 0%, #ffffff 80%);
+
+
+  transition: 0.5s;
+  padding-bottom: 70px;
+}
+/* body {
+  background-color: #140505; /* Set background to black to match the theme */
+  /* padding-top: 0; /* Prevent overlap with fixed header */
+  /* margin: 0; */
+  /* overflow-x: hidden; Prevent horizontal scrolling */
+
+
+/* Header Styling */
+header {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+header .logo {
+  position: relative;
+  max-width: 200px;
+  height: 40px;
+  width: 100px;
+  margin-left: 20px;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  position: relative;
+  color: #060606;
+  font-weight: 500;
+  margin-left: 0px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+
+
+header ul li:not(.login):not(.cart) a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #ffffff;
+  transition: width 0.4s ease;
+}
+
+/* Apply hover effect to other links only */
+header ul li:not(.login):not(.cart) a:hover::after {
+  width: 100%;
+}
+
+header ul li img{
+  width: 25px;
+  height: 25px;
+  margin-top: 12px;
+}
+
+header ul li a:hover {
+  color: #ffffff; /* Example hover color */
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+header ul li a:hover::after {
+  width: 100%;
+}
+
+header ul li a.active {
+  color: #ff7f50; /* Active page link color */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 50px;
+  padding: 4px;
+  padding: hidden;
+  width: 50px;
+  transition: width 0.5s ease;
+  overflow: hidden;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.search-container:hover {
+  width: 250px;
+  margin-right: 5px;
+ 
+}
+
+.search-icon {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+ 
+ 
+  
+  
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  border-radius: 50px;
+  width: 0;
+  font-size: 14px;
+  transition: width 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+.search-container:hover .search-input {
+  width: 200px;
+  opacity: 1;
+}
+
+/* Content Styling */
+.content {
+  width: 100%;
+  height: 610px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #000; Ensure background matches theme */
+}
+
+.content .textBox {
+  max-width: 600px;
+}
+
+.content .textBox h2 {
+  color: #111111;
+  font-size: 4em;
+  line-height: 1.5em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.content .textBox h2 span {
+  font-size: 2em;
+}
+
+.content .textBox p {
+  color: #0c0c0c;
+}
+
+.content .textBox a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background-color:black;
+  color: #ffffff;
+  border-radius: 40px;
+  border: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.5s;
+}
+.content .textBox a:hover{
+  background: #676767;
+  color: white;
+}
+
+.content .imgBox {
+  width: 800px;
+  display: flex;
+  padding-right: 0px;
+  margin-top: 50px;
+  justify-content: flex-end;
+}
+
+.content .imgBox img {
+  max-width: 2000px;
+}
+
+/* Thumbnail Styling */
+.thumb {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.thumb li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  width: 70px;
+  height: 150px;
+}
+
+.thumb li img {
+  align-items: center;
+  align-content: center;
+  width: 170px;
+  height: 150px;
+  margin-top: 30px;
+}
+
+.thumb li:hover {
+  transform: translateY(-15px);
+}
+
+.thumb li img {
+  max-width: 500px;
+}
+
+/* Social Media Icons */
+.sci {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: transform .50s;
+
+}
+
+.smi{
+  border-radius: 80%;
+  background-color:none;
+}
+.smi:hover{
+  transform: scale(1.2);
+}
+.smi fa-brands fa-facebook{
+  width: 50px;
+  height: 50px;
+}
+
+
+.sci li {
+  list-style: none;
+
+}
+
+.sci li a {
+  display: inline-block;
+  filter: invert(1);
+  margin: 5px 0;
+  transform: scale(0.6);
+}
+
+/* Can Set Styling */
+.canset {
+  width: 600px;
+  height: 600px;
+}
+
+/* Carousel Styling */
+.carousel-item img {
+  height: 500px;
+  object-fit: fill;
+  width: 90%;
+   /* Ensure image takes full width */
+}
+
+#blazeCarousel {
+  margin-top: 0%;
+}
+
+h1, h2, h3, p, ul, li, a, img {
+  margin: 0;
+  padding: 0;
+}
+
+/* Products Section Styling */
+.products-section {
+  padding: 50px 0;
+  background-color: #150202;
+}
+
+.products-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.card {
+  border: none;
+  background-color: #000000;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img-top {
+  background-color:color-mix(in srgb, color percentage, color percentage);
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: center;
+  padding: 20px;
+  background-color:darkgray;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff7f50;
+}
+
+.card-text {
+  color: #666;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Body Padding to Avoid Overlap with Fixed Header */
+body {
+  padding-top: 0%; /* Adjust this if the header size changes */
+}

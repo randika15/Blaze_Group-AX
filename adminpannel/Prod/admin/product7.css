@@ -1,0 +1,562 @@
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background: linear-gradient(0deg, #4d4d4e 0%, #1e1e1e 100%); */
+    background-color: #ffffff;
+    display:block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+  ul li a:hover{
+    text-decoration: none;
+    color: rgb(210, 210, 210);
+}
+  
+  header .logo {
+    position: relative;
+    max-width: 200px;
+    height: 40px;
+    width: 100px;
+    margin-left: 20px;
+  }
+  
+  header ul {
+    display: flex;
+  }
+  
+  header ul li {
+    list-style: none;
+  }
+  
+  header ul li a {
+    position: relative;
+    color: #060606;
+    font-weight: 500;
+    margin-left: 0px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: color 0.4s ease, transform 0.4s ease;
+    font-size: 16px;
+
+  }
+  
+  
+  header ul li:not(.login):not(.cart) a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    transition: width 0.4s ease;
+    text-decoration: none;
+  }
+  
+  /* Apply hover effect to other links only */
+  header ul li:not(.login):not(.cart) a:hover::after {
+    width: 100%;
+    text-decoration: none;
+  }
+  
+  header ul li img{
+    width: 25px;
+    height: 25px;
+    margin-top: 12px;
+  }
+  
+  header ul li a:hover {
+    color: #ffffff; /* Example hover color */
+    transform: translateY(-5px); /* Lift effect on hover */
+  }
+  .sec{
+    background-color: #ffffff;
+  }
+  
+  header ul li a:hover::after {
+    width: 100%;
+    text-decoration: none;
+  }
+  
+  header ul li a.active {
+    color: #ff7f50; /* Active page link color */
+    text-decoration: none;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 50px;
+    padding: 4px;
+    padding: hidden;
+    width: 50px;
+    transition: width 0.5s ease;
+    overflow: hidden;
+    height: 50px;
+    margin-right: 15px;
+  }
+  
+  .search-container:hover {
+    width: 250px;
+    margin-right: 5px;
+   
+  }
+  
+  .search-icon {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+  }
+  
+  .search-input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 50px;
+    width: 0;
+    font-size: 14px;
+    transition: width 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+  }
+  
+  .search-container:hover .search-input {
+    width: 200px;
+    opacity: 1;
+  }
+
+/* Product Detail Container */
+.product-detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transform: scale(1);
+    transition: all 0.5s ease;
+}
+
+.product-detail-container:hover {
+    transform: scale(1.02);
+}
+
+/* Product Images */
+.product-images {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.main-image-container img {
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+}
+
+.main-image-container img:hover {
+    transform: scale(1.3);
+}
+
+.thumbnail-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.thumbnail {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.thumbnail:hover {
+    border-color: #e63946;
+    transform: scale(1.2);
+}
+
+/* Product Info */
+.product-info {
+    flex: 2;
+    padding: 20px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-info h1 {
+    font-size: 2.5rem;
+    color: #2a2a2a;
+    margin-bottom: 15px;
+}
+
+.price-rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.price {
+    color: #e63946;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.star-rating {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.star {
+    font-size: 2rem;
+    color: #ddd;
+    transition: color 0.3s;
+}
+
+.star:hover,
+.star.active {
+    color: #fbc02d;
+}
+
+.description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.nutrition-facts {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.nutrition-facts h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.nutrition-facts ul {
+    list-style: none;
+    padding: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Add to Cart */
+.add-to-cart {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.add-to-cart input {
+    width: 60px;
+    margin-right: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.add-to-cart button {
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-to-cart button:hover {
+    background-color: #d62828;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+}
+
+/* Customer Reviews */
+.customer-reviews h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.review {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.review:hover {
+    transform: translateY(-5px);
+}
+
+.review p {
+    margin: 5px 0;
+}
+
+.review-rating {
+    color: #fbc02d;
+    font-size: 1.2rem;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+footer{
+    width: 100%;
+    position:relative;
+    bottom: 0;
+    background: linear-gradient(to bottom,#595959,#151515);
+    color:#ffffff;
+    padding: 50px 0px 10px;
+
+    font-size: 13px;
+    line-height: 20px;
+
+
+}
+.row{
+    width: 85%;
+    margin:20px;
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col{
+    flex-basis: 25%;
+    margin: 0%;
+    padding: 10px;
+    margin-left: 30px;
+
+}
+
+.col:nth-child(2), .col:nth-child(3){
+    flex-basis:15% ;
+}
+.logo{
+    width: 120px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+.col h5{
+    width: fit-content;
+    margin-bottom: 20px;
+    position: relative;
+    margin-top: 0;
+    font-size: 18px;
+
+}
+.col1  {
+    margin-left: 20px;
+    width: 60%;
+}
+.col2{
+    margin-left: 0px;
+}
+
+.col2 p{
+    margin-top: 0;
+}
+.col3{
+    margin-left: 0px;
+}
+.col4{
+    margin-left: -80px;
+}
+.email{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+
+}
+.col ul{
+    padding-left: 0px;
+}
+.col p{
+    margin-bottom: 0;
+}
+ul li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+ul{
+    padding-left: 5px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+
+}
+form .fa-solid{
+    font-size: 38px;
+    margin-right: 10px;
+}
+form input{
+    width: 100%;
+    background: transparent;
+    color: white;
+    border: 0;
+    outline: none; 
+    
+}
+form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+form button .fa-solid{
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+
+
+}
+.social-icons .fa-brands {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #0e0d0d;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.copyright{
+    text-align: center;
+}
+hr{
+    width: 95%;
+    border:0;
+    border-bottom: 1px solid #ccc;
+    margin: 15px auto;
+}
+.underline{
+    width: 100%;
+    height: 2px;
+    background:#767676 ;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left:0;
+    overflow: hidden;
+    margin-top: 1px;
+}
+
+.underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position:absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+@keyframes moving {
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }   
+}
+
+@media(max-width:700px){
+    footer{
+        bottom:unset;
+
+    }
+    .col{
+        flex-basis: 100%;
+
+    }
+    .col:nth-child(2),.col:nth-child(3){
+        flex-basis: 100%;
+    }
+}
+
+.notification-content button {
+    background-color: #e67e22;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.notification-content button:hover {
+    background-color: #d35400;
+}
+

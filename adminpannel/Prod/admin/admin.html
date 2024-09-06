@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="icon" type="image/x-icon" href="/project/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="admin-panel">
+        <header>
+            <img src="/project/adminpannel/Prod/logob.png" alt="Company Logo" class="logo">
+            <h1><center>Admin Panel</center></h1>
+            <a href="/project/adminpannel/dist/pages/index3.html" class="header-button">Dashboard</a>
+        </header>
+        <div class="content">
+            <h2>Add New Product</h2>
+            <form id="add-product-form"method="POST" action="add_product.php">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" name="product-name" required>
+                
+                <label for="product-description">Product Description:</label>
+                <textarea id="product-description" name="product-description" required></textarea>
+                
+                <label for="product-image">Product Image URL:</label>
+                <input type="text" id="product-image" name="product-image" required>
+                
+                <label for="product-price">Product Price:</label>
+                <input type="number" id="product-price" name="product-price" required step="0.01">
+                
+                <label for="product-quantity">Product Quantity:</label>
+                <input type="number" id="product-quantity" name="product-quantity" required>
+                
+                <button type="submit">Add Product</button>
+            </form>
+            
+        
+            <h2>Current Products</h2>
+            <div id="product-list">
+                <a href="/product.html"></a>
+                    <div class="product-card">
+                        <img src="/project/adminpannel/Prod/blue.png" alt="Electric Surge" class="product-image">
+                        <h2>Electric Surge</h2>
+                        <p>A jolt of tangy blue raspberry blended with refreshing lemonade. This vibrant, electrifying drink powers you up for the day.</p>
+                        <p>Price: Rs.650.00</p>
+                        <p>Quantity: 20</p>
+                        <button class="remove-button">Remove Product</button>
+                
+                    </div><br>
+                    <div class="product-card">
+                        <img src="/project/adminpannel/Prod/green.png" alt="Electric Surge" class="product-image">
+                        <h2>Citrus Shock</h2>
+                        <p>A zesty explosion of lemon and lime with a cooling hint of mint. Citrus Shock delivers an invigorating and crisp experience.
+                            
+                        </p>                        
+                        <p>Price: Rs.650.00</p>
+                        <p>Quantity: 20</p>
+                        <button class="remove-button">Remove Product</button>
+                    </div><br>
+                    <div class="product-card">
+                        <img src="/project/adminpannel/Prod/orange.png" alt="Electric Surge" class="product-image">
+                        <h2>Blaze Burst</h2>
+                        <p>A fiery fusion of tropical mango with a spicy kick. Blaze Burst is the perfect balance of sweet and heat to ignite your senses.</p>                        
+                        <p>Price: Rs.650.00</p>
+                        <p>Quantity: 20</p>
+                        <button class="remove-button">Remove Product</button>
+                    </div><br>
+                    <div class="product-card">
+                        <img src="/project/adminpannel/Prod/purple.png" alt="Electric Surge" class="product-image">
+                        <h2>Berry Blitz</h2>
+                        <p>A bold and vibrant blend of rich berries and exotic acai, Berry Blitz energizes with a burst of fruity, tangy, and antioxidant-rich flavor.</p>                        
+                        <p>Price: Rs.650.00</p>
+                        <p>Quantity: 20</p>
+                        <button class="remove-button">Remove Product</button>
+                    </div><br>
+                    <div class="product-card">
+                        <img src="/project/adminpannel/Prod/red.png" alt="Electric Surge" class="product-image">
+                        <h2>Cherry Charge</h2>
+                        <p>A deep, rich black cherry flavor infused with smooth vanilla undertones. Cherry Charge is a sweet and bold energy boost.</p>                        
+                        <p>Price: Rs.650.00</p>
+                        <p>Quantity: 20</p>
+                        <button class="remove-button">Remove Product</button>
+                    </div><br>
+                    <div class="product-card">
+                        <img src="/project/adminpannel/Prod/yellow.png" alt="Electric Surge" class="product-image">
+                        <h2>Tropical Thunder</h2>
+                        <p>An exotic mix of juicy pineapple and creamy coconut, Tropical Thunder transports you to a sun-soaked paradise with every sip.</p>                        
+                        <p>Price: Rs.650.00</p>
+                        <p>Quantity: 20</p>
+                        <button class="remove-button">Remove Product</button>
+                    </div><br>
+                    <!-- Repeat for other products -->
+
+                    </script>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    
+</body>
+</html>
