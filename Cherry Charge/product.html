@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cherry Charge Detail</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section class="sec">
+        <header>
+            <a href="/project/Home.html"><img src="/project/icon/logob.png" class="logo"></a>
+            <div>
+                <ul>
+                    <li><a href="/project/Home.html" style="text-decoration: none;">Home</a></li>
+                    <li><a href="/project/adminpannel/Prod/admin/products.php" style="text-decoration: none;">Products</a></li>
+                    <li><a href="/project/WhatsNew/WhatsNew.html" style="text-decoration: none;">What's New</a></li>
+                    <li><a href="/project/Contact Us/Contact.html" style="text-decoration: none;">Contact</a></li>
+                </ul>
+            </div>
+            <ul>
+                <div class="search-container">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <img src="/project/icon/searchb.png" alt="Search Icon" class="search-icon">
+                </div>
+                <li class="login"><a href="/project/login/login.html"><img src="/project/icon/userb.png"></a></li>
+                <li class="cart"><a href="/project/product1/ProdtoCart/view_cart.php"><img src="/project/icon/cartb.png"></a></li>
+            </ul>
+        </header>
+    </section>
+
+    <!-- Main Container -->
+    <div class="product-detail-container">
+        <!-- Product Images Section -->
+        <div class="product-images">
+            <div class="main-image-container">
+                <img src="/project/images/can set all.png" alt="Energy Drink Main Image" id="mainImage" class="fade-in">
+            </div>
+            <div class="thumbnail-images">
+                <a href="/project/images/turn/red.png">
+                    <img src="/project/images/turn/red.png" alt="Energy Drink Thumbnail 1" class="thumbnail">
+                </a>
+                <a href="/project/images/kelin can/red.png">
+                    <img src="/project/images/kelin can/red.png" alt="Energy Drink Thumbnail 2" class="thumbnail">
+                </a>
+                <a href="/project/images/ala3/red.png">
+                    <img src="/project/images/ala3/red.png" alt="Energy Drink Thumbnail 3" class="thumbnail">
+                </a>
+            </div>
+        </div>
+
+        <!-- Product Information Section -->
+        <div class="product-info" id="product-info">
+            <h1 class="fade-in">Cherry Charge</h1>
+
+            <div class="price-rating fade-in">
+                <p class="price">Rs.650.00</p>
+                <div class="star-rating">
+                    <span>★★★★☆</span> <!-- Static star rating display -->
+                </div>
+            </div>
+            <p class="description fade-in">
+                Cherry Charge combines the bold flavor of black cherry with smooth vanilla undertones, creating a drink that’s both energizing and indulgent. It’s a perfect balance of tart and sweet, giving you a satisfying boost of energy with a comforting twist.
+            </p>
+
+            <!-- Nutritional Facts -->
+            <div class="nutrition-facts fade-in">
+                <h3>Nutritional Facts</h3>
+                <ul>
+                    <li><strong>Flavor : </strong>Black Cherry Vanilla</li>
+                    <li><strong>Caffeine Quantity : </strong>180 mg per 16 oz can</li>
+                    <li><strong>Sugar Quantity : </strong>27g per can</li>
+                    <li><strong>Vitamins : </strong>B3, B6, B12</li>
+                    <li><strong>Calories : </strong>120 kcal per can</li>
+                </ul>
+            </div>
+
+            <!-- Add to Cart Section -->
+            <div class="add-to-cart fade-in">
+                <form action="/project/all product/add_to_cart.php" method="POST"> <!-- meka -->
+                    <input type="hidden" name="product" value="Cherry Charge">
+                    <input type="hidden" name="quantity" value="1">
+                    <button type="submit" class="cart-button">Add to Cart</button>
+                </form>
+            </div>
+
+            <!-- Customer Reviews Section -->
+            <div class="customer-reviews fade-in" id="reviews">
+                <h3>Customer Reviews</h3>
+                <div class="review">
+                    <p><strong>Walter White</strong></p>
+                    <p class="review-rating">★★★★☆</p>
+                    <p>I love that this drink uses natural ingredients and is eco-friendly. It makes me feel good about what I’m putting into my body.</p>
+                </div>
+                <div class="review">
+                    <p><strong>Peter Parker</strong></p>
+                    <p class="review-rating">★★★★★</p>
+                    <p>I’ve been drinking energy drinks for years, but this one stands out. The flavor is better, and the energy boost feels more natural.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="row" style="margin-left: 60px; margin-right: 60px;">
+            <div class="col">
+                <div class="col1">
+                    <img src="/project/icon/logo.png" alt="logo" class="logo">
+                    <p>Blaze is not just an energy drink; it's a surge of vitality packed in a can.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="col2">
+                    <h5>Address <div class="underline"><span></span></div></h5>
+                    <p>School Junction</p>
+                    <p>Pitipana</p>
+                    <p>Homagama</p>
+                    <p>+94 123 45620</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="col3">
+                    <h5>Links <div class="underline"><span></span></h5>
+                    <ul>
+                        <li><a href="/project/Home.html">Home</a></li>
+                        <li><a href="/project/about us/about.html">About Us</a></li>
+                        <li><a href="/project/Contact Us/Contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="col4">
+                    <h5>Newsletter <div class="underline"><span></span></h5>
+                    <form>
+                        <input type="email" placeholder="Enter your email ID" required>
+                        <button type="submit"><i class="fa-solid fa-arrow-right fa-2xl custom-icon"></i></button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/RiesxHxFmt8yYZxu/?mibextid=qi2Omg" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/blaze_energy_official?utm_source=qr&igsh=MXRqMXIxMWE5aHhjdQ==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/blaze_energy99" target="_blank"><i class="fa-brands fa-x"></i></a>
+                        <a href="https://wa.me/0715577940"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright"><span>&#169; </span> 2024 - BLAZE Energy. All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>
